@@ -39,6 +39,7 @@ class Blockchain(object):
 
     ''' 
     --- START: DECORATOR EXPLANATION ------------------
+        testing git
         @ signifies a decorator which is used before a function definition as shown
         
         def decorator(func):
