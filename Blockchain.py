@@ -106,17 +106,21 @@ class Blockchain(object):
         '''
         About Encoding:
         the defualt python string are stored as Unicode object where non ASCII character are strored as hexadecimal.
-        The str object's encode() can be used to convert from default Unicode encoding to byte litral
+        The str object's encode() can be used to convert from default Unicode encoding to byte litral.
+        json.dumps() function converts the python dictornary into a jason file (sorted) 
+        json.loads() does the reverse i.e. converts a json structure in python dictonary
         
         About SHA256 hashing:
+        The SHA (Secure Hash Algorithm) is a cryptographic hash functions. SHA-256 algorithm generates an unique, 
+        fixed size 256-bit (32-byte) hash.
         SHA256 method of hashlib library converts a string to SHA256 hashing and stores as a memory address
-        The hexdigest of the memory gives the hash
-        >>> "prashant".encode()
-        b'prashant'
-        >>> hashlib.sha256("prashant".encode())
-        <sha256 HASH object @ 0x03B3BCF8>
-        >>> hashlib.sha256("prashant".encode()).hexdigest()
-        'f173b46b650d9708d31b642021d04ed380c54db71fc9f0ab829d1c2597d37f3d'
+        The hexdigest of the memory gives the hash as
+            >>> "prashant".encode()
+            b'prashant'
+            >>> hashlib.sha256("prashant".encode())
+            <sha256 HASH object @ 0x03B3BCF8>
+            >>> hashlib.sha256("prashant".encode()).hexdigest()
+            'f173b46b650d9708d31b642021d04ed380c54db71fc9f0ab829d1c2597d37f3d'
         '''
         # We must make sure that the Dictionary is Ordered, or we'll have inconsistent hashes
         block_string = json.dumps(block, sort_keys=True).encode()
@@ -128,3 +132,30 @@ class Blockchain(object):
     def last_block(self):
         return self.chain[-1]
 
+    def proof_of_work(self, last_proof):
+        """
+        Simple Proof of Work Algorithm:
+         - Find a number p' such that hash(pp') contains leading 4 zeroes, where p is the previous p'
+         - p is the previous proof, and p' is the new proof
+        :param last_proof: <int>
+        :return: <int>
+        """
+
+        proof = 0
+        while self.valid_proof(last_proof, proof) is False:
+            proof += 1
+
+        return proof
+
+    @staticmethod
+    def valid_proof(last_proof, proof):
+        """
+        Validates the Proof: Does hash(last_proof, proof) contain 4 leading zeroes?
+        :param last_proof: <int> Previous Proof
+        :param proof: <int> Current Proof
+        :return: <bool> True if correct, False if not.
+        """
+
+        guess = f'{last_proof}{proof}'.encode()
+        guess_hash = hashlib.sha256(guess).hexdigest()
+        return guess_hash[:4] == "0000"

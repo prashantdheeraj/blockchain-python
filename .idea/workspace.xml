@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1213eaf1-d56d-44e1-8b59-c72ac59e8d6d" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/pdheeraj.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/Blockchain.py" afterPath="$PROJECT_DIR$/Blockchain.py" />
     </list>
@@ -18,12 +17,13 @@
       <file leaf-file-name="Blockchain.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Blockchain.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="431">
-              <caret line="124" column="0" lean-forward="true" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+            <state relative-caret-position="817">
+              <caret line="161" column="0" lean-forward="true" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
               <folding>
                 <element signature="e#215#229#0" expanded="true" />
                 <element signature="e#2046#2598#1" expanded="false" />
                 <element signature="e#2604#2833#1" expanded="false" />
+                <element signature="e#3006#4103#1" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -139,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1519989700333</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Commit on GIT">
+      <created>1520001054383</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1520001054383</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -185,6 +192,7 @@
             <element signature="e#215#229#0" expanded="true" />
             <element signature="e#2046#2598#1" expanded="false" />
             <element signature="e#2604#2833#1" expanded="false" />
+            <element signature="e#3006#4103#1" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -199,12 +207,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Blockchain.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="124" column="0" lean-forward="true" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+        <state relative-caret-position="817">
+          <caret line="161" column="0" lean-forward="true" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
           <folding>
             <element signature="e#215#229#0" expanded="true" />
             <element signature="e#2046#2598#1" expanded="false" />
             <element signature="e#2604#2833#1" expanded="false" />
+            <element signature="e#3006#4103#1" expanded="false" />
           </folding>
         </state>
       </provider>
